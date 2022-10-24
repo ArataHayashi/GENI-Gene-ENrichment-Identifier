@@ -1,4 +1,4 @@
-GENI
+GENI ~ Gene ENrichment Identifier ~
 ====
 ### Run GENI 
 
