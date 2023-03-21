@@ -1,7 +1,7 @@
 GENI ~ Gene ENrichment Identifier ~
 ====
-### Run GENI 
+### Use GENI 
 
-To run GENI in the R studio
+Click to run GENI in shinyapps.io
 
-https://yoavshaul-lab.shinyapps.io/geni/
+https://yoavshaul-lab.shinyapps.io/gsea-geni/
