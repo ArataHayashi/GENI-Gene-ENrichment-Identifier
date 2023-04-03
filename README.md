@@ -1,6 +1,15 @@
 GENI ~ Gene ENrichment Identifier ~
 ====
 ### Use GENI 
+Click to run GENI in shinyapps.io
+
+https://yoavshaul-lab.shinyapps.io/gsea-geni/
+
+
+
+
+
+
 
 
 The script was builted to run in shinnyapps.io.
@@ -16,6 +25,3 @@ In the case that you want to run GENI in local R:
  
 
 
-Click to run GENI in shinyapps.io
-
-https://yoavshaul-lab.shinyapps.io/gsea-geni/
