@@ -1,0 +1,1392 @@
+
+
+<body style = "width:60%; margin: auto;background-color:powderblue;"
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<br>
+<br>
+<br>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://i.ibb.co/cb00P7n/geni-no-background-updated-21-11-2022.png" width="300" height="200"/></p>
+<p><h1 style="text-align: center;"><font size = '+4'><strong>HELP</strong></font></p>
+
+<br>
+<br>
+<hr />
+<br>
+<br>
+<h1 style="text-align: center;">SUMMARY</h1>
+<p style="text-align: center;">GENI is an open web tool for rapid analysis of Gene Set Enrichment which enables intuitive analysis of gene set enrichment in cancer patients' gene expression without prior software experience. 
+<br> It gives you inspiration on how the gene of your interest affects a set of genes based on the gene expression of cancer patients from clinical studies.</p>
+
+<br>
+<br>
+
+<hr />
+<br>
+<br>
+
+<h1 style="text-align: center;">Index</h1>
+<ol type = "1" style="text-align: center;">
+
+<p><a href="#Start GENI" style = "color: black;">1. Start GENI</a>
+<br>&emsp;<a href="#Result" style = "color: black;">Result</a>
+<br><a href="#Apply GSEA on your own data" style = "color: black;">2. Apply GSEA on your own data</a>
+<br>&emsp;<a href="#Result2" style = "color: black;">Result</a>
+<br><a href="#Download gene expression data" style = "color: black;">3. Download gene expression data</a></p>
+</ol>
+<br>
+<br>
+<hr />
+<br>
+<br>
+
+<h1 style="text-align: center;"><font size = '+2'><a id ="Start GENI" style = "color: black;"><strong>1.Start GENI</strong></a></font></h1>
+
+
+
+
+<p style = "text-align: left;"> 1. Enter your gene of interest. 
+<br>&emsp;Enter a gene symbol or gene ID (NCBI gene ID).
+<br>&emsp;The candidate genes will appear below, you can copy and paste it. 
+<br>&emsp;Once you entered the gene name, it shows "Gene ID is valid".</p>
+
+<head>
+    <style>
+ 
+        #image1 {
+            display: none;
+            margin: auto;
+        }
+        #btnID1-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID1-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+ 
+    <button type="button"
+        onclick="show1()" id="btnID1-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide1()" id="btnID1-2" >
+         - Example
+    </button>
+    
+    <div>
+        <!-- Add id to image -->
+        <img id="image1" src="https://www.linkpicture.com/q/1_747.png" class="center-fit"
+            alt="png image" />
+        
+        
+    </div>
+    <script>
+        function show1() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image1')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID1-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID1-2')
+                    .style.display = "block";
+        }
+        function hide1() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image1')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID1-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID1-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+ 
+ 
+ 
+ 
+ 
+<p style = "text-align: left;"> 2. Select study that you want apply GENI on.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Next, select one of the study form the TCGA database. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can choose the tissue type first. Default is "all" to show all studies.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Once you chose the study, it shows chosen study name below.</p>
+<head>
+    <style>
+ 
+        #image2 {
+            display: none;
+            margin: auto;
+        }
+        #btnID2-1{
+            display: block;
+            margin: auto; 
+        }
+        #btnID2-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button type="button"
+        onclick="show2()" id="btnID2-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide2()" id="btnID2-2" >
+         - Example
+    </button>
+        <div>
+<img id="image2" src="https://www.linkpicture.com/q/2_327.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show2() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image2')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID2-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID2-2')
+                    .style.display = "block";
+        }
+        function hide2() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image2')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID2-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID2-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+<p style = "text-align: left;"> 3. Select gene set that used to find group of genes.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then, select one of the gene sets form MSigDB. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For more information about gene sets, <a href = "https://www.gsea-msigdb.org/gsea/msigdb/genesets.jsp" target="_blank" style = "color: black;">click the link here</a> (open in new tab).</p>
+
+<head>
+    <style>
+ 
+        #image3 {
+            display: none;
+            margin: auto;
+        }
+        #btnID3-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID3-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button type="button"
+        onclick="show3()" id="btnID3-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide3()" id="btnID3-2" >
+         - Example
+    </button>
+        <div>
+<img id="image3" src="https://www.linkpicture.com/q/3_509.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show3() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image3')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID3-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID3-2')
+                    .style.display = "block";
+        }
+        function hide3() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image3')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID3-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID3-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<p style = "text-align: left;"> 4. Change detailed settings of the run (optionally).
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can change detailed settings for the GENI.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Select first order of the sheet : You can define the order of the result summary sheet. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can change it later on the sheet itself,too.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change permutations : You can define the number of permutations.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change minimun number of gene set
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change maximun number of gene set
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Select normalization option
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Select exponent option
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change p-value cut off
+</p>
+
+
+<head>
+    <style>
+ 
+        #image4 {
+            display: none;
+            margin: auto;
+        }
+        #btnID4-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID4-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button type="button"
+        onclick="show4()" id="btnID4-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide4()" id="btnID4-2" >
+         - Example
+    </button>
+        <div>
+<img id="image4" src="https://www.linkpicture.com/q/4_368.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show4() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image4')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID4-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID4-2')
+                    .style.display = "block";
+        }
+        function hide4() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image4')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID4-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID4-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+<br>
+<br>
+<br>
+<hr />
+<br>
+<br>
+<br>
+<h1 style="text-align: center;"><a id = "Result" style = "color: black;"><font size = '+2'> <strong>Result</strong></font></a></h1>
+<br>
+<p style="text-align: left;"> Once you click "Apply GSEA", you will intermediate result table with gene set name, gene set size, NES(normalized enrichment score), Nominal p-value, Family-wise error rate p-value and False discovery rate q-value.(See Example)
+<br> </p>
+
+
+<head>
+    <style>
+ 
+        #image5{
+            display: none;
+            margin: auto;
+        }
+        #btnID5-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID5-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button type="button"
+        onclick="show5()" id="btnID5-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide5()" id="btnID5-2" >
+         - Example
+    </button>
+        <div>
+<img id="image5" src="https://www.linkpicture.com/q/5_300.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show5() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image5')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID5-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID5-2')
+                    .style.display = "block";
+        }
+        function hide5() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image5')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID5-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID5-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<br>
+<p style="text-align: left;"> Below the table, you can find "summary plot" which colored by FDR, sized by gene set size and ordered by p-value.
+<br> You can hide / show the "summary plot" by clicking the "Show/Hide summary plot" button.</p>
+
+
+<head>
+    <style>
+ 
+        #image6{
+            display: none;
+            margin: auto;
+        }
+        #btnID6-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID6-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button type="button"
+        onclick="show6()" id="btnID6-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide6()" id="btnID6-2" >
+         - Example
+    </button>
+        <div>
+<img id="image6" src="https://www.linkpicture.com/q/6_240.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show6() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image6')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID6-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID6-2')
+                    .style.display = "block";
+        }
+        function hide6() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image6')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID6-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID6-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+
+
+<br>
+<p style="text-align: left;"> Now, You can chose single row to see its details, enrich plot and gene list. Selected row will be colored blue
+<br> Or, you can click first column of several rows to select gene group for download. 
+<br> Selected gene groups are marked as ✅.</p>
+
+
+<head>
+    <style>
+ 
+        #image7{
+            display: none;
+            margin: auto;
+        }
+        #btnID7-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID7-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button type="button"
+        onclick="show7()" id="btnID7-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide7()" id="btnID7-2" >
+         - Example
+    </button>
+        <div>
+<img id="image7" src="https://www.linkpicture.com/q/7_194.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show7() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image7')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID7-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID7-2')
+                    .style.display = "block";
+        }
+        function hide7() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image7')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID7-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID7-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<br>
+<p style="text-align: left;"> When you select single row, you can find details below the "summary plot".
+<br> After you chose row, you can click the "Click for gene set detail" button and find details about its gene sets at MSigDB website.
+<br> Optionally, you can select the "put p value table" to show details in the enrich plot. It also affect on the plots you download.
+<br> In the end, you can download your analysis result by clicking "download" button. Now window to chose the directory will be appear and the file contains summary plots, summary result, colleration sheet of the data, selected gene sets' enrich plot and selected gene sets' gene list will be downloaded.</p>
+
+
+<head>
+    <style>
+ 
+        #image8{
+            display: none;
+            margin: auto;
+        }
+        #btnID8-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID8-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show8()" id="btnID8-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide8()" id="btnID8-2" >
+         - Example
+    </button>
+    <div>
+<img id="image8" src="https://www.linkpicture.com/q/8_89.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show8() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image8')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID8-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID8-2')
+                    .style.display = "block";
+        }
+        function hide8() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image8')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID8-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID8-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<br>
+<br>
+
+<hr />
+<br>
+<br>
+<p style="text-align: left;"> </p>
+<h1 style="text-align: center;"><font size = '+2'><a id="Apply GSEA on your own data" style = "color: black;"> <strong>2.Apply GSEA on your own data</strong></a></font></h1>
+
+
+
+<br>
+<br>
+
+<br>
+<p style="text-align: left;"> As a sub-function of GENI, you can easily apply Gene Set Enrichment Analysis on your results.
+<br> First, click the "Browse" button and upload your data to the GENI with gene name or gene ID in first column and expression difference in second column in xlsx, csv or txt format.
+<br> Your uploaded file format will be appeared below.</p>
+
+
+<head>
+    <style>
+ 
+        #image9{
+            display: none;
+            margin: auto;
+        }
+        #btnID9-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID9-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show9()" id="btnID9-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide9()" id="btnID9-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image9" src="https://www.linkpicture.com/q/9_139.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show9() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image9')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID9-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID9-2')
+                    .style.display = "block";
+        }
+        function hide9() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image9')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID9-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID9-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<p style = "text-align: left;"> Second, elect gene set that used to find group of genes.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then, select one of the gene sets form MSigDB. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For more information about gene sets, <a href = "https://www.gsea-msigdb.org/gsea/msigdb/genesets.jsp" target="_blank" style = "color: black;">click the link here</a> (open in new tab).</p>
+
+<head>
+    <style>
+ 
+        #image10 {
+            display: none;
+            margin: auto;
+        }
+        #btnID10-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID10-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show10()" id="btnID10-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide10()" id="btnID10-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image10" src="https://www.linkpicture.com/q/10_138.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show10() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image10')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID10-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID10-2')
+                    .style.display = "block";
+        }
+        function hide10() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image10')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID10-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID10-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<p style = "text-align: left;"> Optionally, you can change detailed settings of the run.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can change detailed settings for the GENI.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Select first order of the sheet : You can define the order of the result summary sheet. 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You can change it later on the sheet itself,too.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change permutations : You can define the number of permutations.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change minimun number of gene set
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change maximun number of gene set
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Select normalization option
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Select exponent option
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Change p-value cut off
+</p>
+
+
+<head>
+    <style>
+ 
+        #image11 {
+            display: none;
+            margin: auto;
+        }
+        #btnID11-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID11-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show11()" id="btnID11-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide11()" id="btnID11-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image11" src="https://www.linkpicture.com/q/11_81.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show11() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image11')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID11-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID11-2')
+                    .style.display = "block";
+        }
+        function hide11() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image11')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID11-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID11-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+<hr />
+<br>
+<br>
+<br>
+<h1 style="text-align: center;"><a id = "Result2" style = "color: black;"><font size = '+2'> <strong>Result</strong></font></a></h1>
+<br>
+<p style="text-align: left;"> Once you click "Apply GSEA", you will intermediate result table with gene set name, gene set size, NES(normalized enrichment score), Nominal p-value, Family-wise error rate p-value and False discovery rate q-value.(See Example)
+<br> </p>
+
+
+<head>
+    <style>
+ 
+        #image12{
+            display: none;
+            margin: auto;
+        }
+        #btnID12-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID12-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+ 
+    <button type="button"
+        onclick="show12()" id="btnID12-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide12()" id="btnID12-2" >
+         - Example
+    </button>
+    
+    
+    <div>
+<img id="image12" src="https://www.linkpicture.com/q/12_80.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+    <script>
+        function show12() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image12')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID12-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID12-2')
+                    .style.display = "block";
+        }
+        function hide12() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image12')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID12-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID12-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<br>
+<p style="text-align: left;"> Below the table, you can find "summary plot" which colored by FDR, sized by gene set size and ordered by p-value.
+<br> You can hide / show the "summary plot" by clicking the "Show/Hide summary plot" button.</p>
+
+
+<head>
+    <style>
+ 
+        #image13{
+            display: none;
+            margin: auto;
+        }
+        #btnID13-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID13-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show13()" id="btnID13-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide13()" id="btnID13-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image13" src="https://www.linkpicture.com/q/13_41.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show13() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image13')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID13-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID13-2')
+                    .style.display = "block";
+        }
+        function hide13() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image13')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID13-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID13-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+
+
+<br>
+<p style="text-align: left;"> Now, You can chose single row to see its details, enrich plot and gene list. Selected row will be colored blue
+<br> Or, you can click first column of several rows to select gene group for download. 
+<br> Selected gene groups are marked as ✅.</p>
+
+
+<head>
+    <style>
+ 
+        #image14{
+            display: none;
+            margin: auto;
+        }
+        #btnID14-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID14-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+ 
+    <button type="button"
+        onclick="show14()" id="btnID14-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide14()" id="btnID14-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image14" src="https://www.linkpicture.com/q/14_83.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+    <script>
+        function show14() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image14')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID14-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID14-2')
+                    .style.display = "block";
+        }
+        function hide14() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image14')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID14-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID14-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<br>
+<p style="text-align: left;"> When you select single row, you can find details below the "summary plot".
+<br> After you chose row, you can click the "Click for gene set detail" button and find details about its gene sets at MSigDB website.
+<br> Optionally, you can select the "put p value table" to show details in the enrich plot. It also affect on the plots you download.
+<br> In the end, you can download your analysis result by clicking "download" button. Now window to chose the directory will be appear and the file contains summary plots, summary result, your data sheet, selected gene sets' enrich plot and selected gene sets' gene list will be downloaded.</p>
+
+
+<head>
+    <style>
+ 
+        #image15{
+            display: none;
+            margin: auto;
+        }
+        #btnID15-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID15-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show15()" id="btnID15-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide15()" id="btnID15-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image15" src="https://www.linkpicture.com/q/15_87.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show15() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image15')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID15-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID15-2')
+                    .style.display = "block";
+        }
+        function hide15() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image15')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID15-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID15-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+<br>
+<br>
+
+<hr />
+<br>
+<br>
+<p style="text-align: left;"> </p>
+<h1 style="text-align: center;"><a id = "Download gene expression data" style = "color: black;"><font size = '+2'> <strong>3.Download gene expression data</strong></a></font></h1>
+<br>
+<p style = "text-align: center;"> Here you can download gene expression datas which are used for analysis.
+<br> First, please chose the data base.
+
+
+
+<p style = "text-align: left;"> 
+</p>
+
+
+<head>
+    <style>
+ 
+        #image16 {
+            display: none;
+            margin: auto;
+        }
+        #btnID16-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID16-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show16()" id="btnID16-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide16()" id="btnID16-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image16" src="https://www.linkpicture.com/q/16_52.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show16() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image16')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID16-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID16-2')
+                    .style.display = "block";
+        }
+        function hide16() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image16')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID16-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID16-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+
+
+<p style = "text-align: center;"> Next, chose the downloading format. and click "Download" button.
+
+
+
+<p style = "text-align: left;"> 
+</p>
+
+
+<head>
+    <style>
+ 
+        #image17 {
+            display: none;
+            margin: auto;
+        }
+        #btnID17-1{
+            display: block;
+            margin: auto;
+        }
+        #btnID17-2{
+            display: none;
+            margin: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button type="button"
+        onclick="show17()" id="btnID17-1" >
+         + Example
+    </button>
+	 <button type="button"
+	 	
+        onclick="hide17()" id="btnID17-2" >
+         - Example
+    </button>
+    
+    <div>
+<img id="image17" src="https://www.linkpicture.com/q/17_21.png" class="center-fit"
+            alt="png image" />
+ 
+       
+    </div>
+ 
+    <script>
+        function show17() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image17')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID17-1')
+                    .style.display = "none";
+                    
+            document.getElementById('btnID17-2')
+                    .style.display = "block";
+        }
+        function hide17() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image17')
+                    .style.display = "none";
+ 
+            document.getElementById('btnID17-1')
+                    .style.display = "block";
+                    
+            document.getElementById('btnID17-2')
+                    .style.display = "none";
+        }
+    </script>
+</body>
+
+
+
+<p style="text-align: left;"> </p>
+
+<br>
+<br>
+
+<hr />
+<br>
+<br>
+
+
+</body>
