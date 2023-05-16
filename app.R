@@ -3,6 +3,15 @@
 ## 15 June 2022
 
 
+## Update##
+# Change in Intro tour : with demo run
+# Update in Symbol-ID 
+# Optimize the loading
+# Pictures are updated
+# Bug in download and plot making was fixed (22/1/2023)
+# Error messeage with no gene set was added (2023/03/14)
+# 
+
 
 library(shiny)
 library(shinyFiles)
@@ -60,7 +69,9 @@ help_text <- readRDS("dat/helptext.RDS")
 
 
 ui  <- fluidPage(
-  
+  tags$head(includeHTML(("www/google-analytics.html"))),
+  tags$head(includeScript(("www/google-analytics.js"))),
+   
   titlePanel(tags$head(tags$link(rel = "icon", type = "image/png", href = "https://www.linkpicture.com/q/GENI_only_GENI.png"),
                        tags$title("GENI - geni - gene enrichment identifier"))
                        
